@@ -1,5 +1,6 @@
 # jsAnimate
-<h2>目前该插件的亮点是非常方便的轮播图方法，只需要一个div标签将所有图片标签嵌套，然后再写一行js即可。同时还有一些其他的小动画方法，具体用法如下</h2><br /><br />
+<h2>目前该插件的亮点是非常方便的轮播图方法，只需要一个div标签将所有图片标签嵌套，然后再写一行js即可。可以监听浏览器窗口大小的改变做出自适应。css样式什么的完全不用管，js会自动识别里面的img数量并作出相应的处理。如果div里面只有一个img，那么和正常情况下一样，不会有轮播图效果，img宽度会占满div。它的缺点就是轮播图的整体样式是固定的。</h2>
+<h2>同时还有一些其他的小动画方法，具体用法如下</h2><br /><br />
 jsAnimate对象中目前存放了四个方法<br />
 分别是: <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;逐渐显示：show(node<object>, time<number>), 在time秒内, node由display: none渐变为display: block<br />
