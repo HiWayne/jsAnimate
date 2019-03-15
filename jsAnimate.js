@@ -268,7 +268,7 @@ var jsAnimate = function () {
         }
 
         //图片移动方法
-        function graduallymove(index, ) {
+        function graduallymove(index) {
             clearTimeout(tempMoveTimeout)
             if (index === imgNumber + 1) {
                 currentIndex = 1
