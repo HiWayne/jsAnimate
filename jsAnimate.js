@@ -1,4 +1,3 @@
-/*由于css3渐变不支持display等样式属性, 于是用原生js实现类似jQuery-animate的动画效果*/
 var jsAnimate = function () {
     //闭包(避免污染全局命名空间),临时储存定时器对象
     var tempShowHideSetTime, tempReturnTopSetTime
