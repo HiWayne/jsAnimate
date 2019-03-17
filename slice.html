@@ -18,11 +18,15 @@
     <img src="http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/04/05/58034ac16316c164e36f17eaa9f6aff2.jpg">
 </div>
 <script type="text/javascript">
-    /*
-      可能不兼容IE8以下浏览器, 未测试
-      jsAnimate对象中目前存放了四个方法, 具体见GitHub的README.md
+    /*轮播图插件，只需要一个div标签将所有img标签嵌套，然后再写一行js即可。可以根据浏览器窗口大小的改变做出自适应。
+      轮播图css样式什么的完全不用管，js会识别里面的img数量并作出相应的样式处理。
+      如果div里面只有一个img，那么不会有轮播图样式和效果，img宽度会占满div(相当于一张全屏大图)。
+      *@method slice
+      *@for jsAnimate
+      *@param {object, number, number}
+        1.元素节点, 2.间隔时间(图片自动切换的时间, 单位秒), 滚动速度时间(从原位置滚动到目标位置的时间, 单位秒)
+      *@return {undefined}
     */
-    //slide参数parame: 节点node:object, 间隔时间(图片切换的时间, 单位秒)intervalTime:number<s>, 滚动时间(从原位置滚动到目标位置的时间, 单位秒)scrollToTargetTime:number<s>
     jsAnimate.slide(document.getElementById("slide"), 3, 0.3)
 </script>
     
