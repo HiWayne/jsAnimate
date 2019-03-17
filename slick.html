@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>slick</title>
+    <script type="text/javascript" src="jsAnimate.js"></script>
+</head>
+
+<body>
+    <div id="slick">
+        <a class="partenaires_scroll_list_item_a"><img src="http://n1.itc.cn/img8/wb/recom/2016/08/18/147145008352231142.GIF">案例1</a>
+        <a class="partenaires_scroll_list_item_a"><img src="http://5b0988e595225.cdn.sohucs.com/images/20180920/12fdd94f223a47828614f839c402e563.gif">案例2</a>
+        <a class="partenaires_scroll_list_item_a"><img src="https://a-ssl.duitang.com/uploads/item/201801/02/20180102213144_8HnfZ.thumb.224_0.gif">案例3</a>
+        <a class="partenaires_scroll_list_item_a"><img src="https://img5.duitang.com/uploads/item/201501/24/20150124152506_nGWZB.thumb.224_0.gif">案例4</a>
+        <a class="partenaires_scroll_list_item_a"><img src="https://b-ssl.duitang.com/uploads/item/201806/14/20180614170555_KFKsH.thumb.224_0.gif">案例5</a>
+        <a class="partenaires_scroll_list_item_a"><img src="https://b-ssl.duitang.com/uploads/item/201803/02/20180302172347_V4zuA.thumb.224_0.gif">案例6</a>
+        <a class="partenaires_scroll_list_item_a"><img src="http://image001.fuwuqizhijia.com/20170321/8be9fb1e996dad1eb13a8393cfdc0563.gif">案例7</a>
+        <a class="partenaires_scroll_list_item_a"><img src="https://b-ssl.duitang.com/uploads/item/201807/14/20180714004221_svpkd.thumb.224_0.gif">案例8</a>
+    </div>
+    <script>
+        /*旋转木马插件, 只需引入一行js, 可自定义滚动的速度、一页的展示数量、高度、一次滚动一个还是一整页(默认是一次滚动一个)、展示区域内的元素按行还是列排列(默认是列)、是否支持图片缩放
+          最外层元素div内用于展示的子元素的后代元素们必须只有一个根元素
+          *@method slick
+          *@for jsAnimate
+          *@param {object, number, number, number, boolean, boolean || string, boolean}
+            1.根元素节点, 2.滚动的速度, 3.一页的展示数量, 4.整体高度, 5.一次滚动一个还是一整页(true是一整页,若想设置下一个参数,该参数不可省略), 6.展示区域内元素排列方式(false或"column"是按列,其他运算结果为true的是按行), 7.是否支持图片移入缩放
+          *@return {object}
+            根元素对象
+        */
+        jsAnimate.slick(document.getElementById("slick"), 0.3, 5, 160, false, "column", true)
+    </script>
+</body>
+
+</html>
