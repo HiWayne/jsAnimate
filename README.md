@@ -3,7 +3,7 @@
 <h3>更新时间update: 2019.3.17&nbsp;&nbsp;&nbsp;&nbsp;新增功能--新增旋转木马效果：方法名jsAnimate.slick。旋转木马插件, 同样只需引入一行js, 可自定义滚动的速度、一页的展示数量、高度、一次滚动一个还是一整页(默认是一次滚动一个)、展示区域内的元素按行还是列排列(默认是列)、是否支持图片缩放。<a href="https://hiwayne.github.io/jsAnimate/slick.html">详见演示教程slick.html</a>，或下载该repository。</h3><br /><br />
 <h3>首次发布时间uploadTime:2019.3.15&nbsp;&nbsp;&nbsp;&nbsp;目前该插件的亮点是非常方便的轮播图方法。只需要一个div标签将所有img标签嵌套，然后再写一行js即可。可以根据浏览器窗口大小的改变做出自适应。轮播图css样式什么的完全不用管，js会识别里面的img数量并作出相应的处理。如果div里面只有一个img，那么和正常情况下一样，不会有轮播图效果，img宽度会占满div(相当于一张全屏大图)。该插件的缺点就是轮播图的整体样式是固定的。<a href="https://hiwayne.github.io/jsAnimate/slice.html">详见演示教程slice.html</a>，或下载该repository。</h3>
 <h4>同时还有一些其他的小动画方法，具体用法如下</h4><br /><br />
-jsAnimate对象中目前存放了四个方法<br />
+jsAnimate对象中目前存放了四个方法（<h3>现已更新：最新的更新在最顶部</h3>）<br />
 分别是: <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;逐渐显示：show(node<object>, time<number>), 在time秒内, node由display: none渐变为display: block<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;逐渐消失：hide(node<object>, time<number>), 在time秒内, node逐渐消失, 最终display: none<br />
