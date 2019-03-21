@@ -1,4 +1,4 @@
-# jsAnimate(有注释Comment out)
+# jsAnimate（只需一个js即可简洁的实现轮播图、旋转木马、懒加载等特效，可在页面任一处复用）
 <h2>更新时间updata: 2019.3.20&nbsp;&nbsp;&nbsp;&nbsp;新增功能--新增类似animate.css的懒加载过渡效果: 只需引入jsAnimate.js，然后在你想要的元素class属性里加入相关的类名即可，具体类名对应的效果以及使用中的注意事项，<a href="https://hiwayne.github.io/jsAnimate/lazyfade.html">详见lazyfade.html中的演示教程</a>，或下载该repository。</h2><br /><br />
 <h3>更新时间update: 2019.3.17&nbsp;&nbsp;&nbsp;&nbsp;新增功能--新增旋转木马效果：方法名jsAnimate.slick。旋转木马插件, 同样只需引入一行js, 可自定义滚动的速度、一页的展示数量、高度、一次滚动一个还是一整页(默认是一次滚动一个)、展示区域内的元素按行还是列排列(默认是列)、是否支持图片缩放。<a href="https://hiwayne.github.io/jsAnimate/slick.html">详见演示教程slick.html</a>，或下载该repository。</h3><br /><br />
 <h3>首次发布时间uploadTime:2019.3.15&nbsp;&nbsp;&nbsp;&nbsp;目前该插件的亮点是非常方便的轮播图方法。只需要一个div标签将所有img标签嵌套，然后再写一行js即可。可以根据浏览器窗口大小的改变做出自适应。轮播图css样式什么的完全不用管，js会识别里面的img数量并作出相应的处理。如果div里面只有一个img，那么和正常情况下一样，不会有轮播图效果，img宽度会占满div(相当于一张全屏大图)。该插件的缺点就是轮播图的整体样式是固定的。<a href="https://hiwayne.github.io/jsAnimate/slice.html">详见演示教程slice.html</a>，或下载该repository。</h3>
