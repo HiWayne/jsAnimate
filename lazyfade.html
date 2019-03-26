@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html style="height:100%;">
+
+<head>
+    <meta charset="utf-8">
+    <title>lazyFade</title>
+    <script type="text/javascript" src="jsAnimate.js"></script>
+</head>
+
+<body
+    style="font-family:'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;color:#7f8c8d;font-size:16px;height:100%;">
+    <div style="width:100%;height:100%;">
+        <div style="margin:0 auto;max-width:1200px;height:100%;">
+            <!--lazyLoad fadein-left fadein-right-->
+            <div
+                style="display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;width:100%;height:100%;text-align:center;">
+                <div>
+                    <p class="lazyfade zoomin" style="font-size: 36px;font-weight:bold;color:rgb(79, 192, 141);">
+                        懒加载过渡效果演示DEMO
+                    </p>
+                    <p class="lazyfade fadein-left" style="font-size: 18px;font-weight:bold;color:rgb(79, 192, 141);">
+                        懒加载：即窗口滚动到目标处才会执行相应动作。
+                    </p>
+                </div>
+                <div class="lazyfade fadein-right"><img width="600px;"
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553065422746&di=079d2d36c51c29784eea24f4ca7503e5&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F35%2F60%2F77t58PICIRG_1024.jpg">
+                </div>
+            </div>
+            <!--lazyLoad fadein and fadeout-->
+            <div
+                style="display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;width:100%;height:100%;">
+                <div class="lazyfade fadein-left-r"><img width="600px"
+                        src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4050501865,65806546&fm=26&gp=0.jpg">
+                </div>
+                <div class="lazyfade fadein-right-r">
+                    <p style="padding:0 30px;font-size:20px;font-weight:bold;color:rgb(79, 192, 141);line-height:2em;">
+                        你只需引入jsAnimate.js文件，然后在你期望的元素class属性中加入lazyfade、fadein-left等类名，即可实现效果。值得注意的是，js仅当所有网页文档加载完成后才会执行。下面我将具体解释不同类名对应的效果。
+                    </p>
+                </div>
+            </div>
+            <!--lazyLoad fadein-bottom-->
+            <div
+                style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;width:100%;height:100%;">
+                <div>
+                    <p class="lazyfade fadein-left" style="margin-bottom:10px;line-height:2em;font-size:18px;font-weight:bold;color:#7f8c8d;background:#eee;"><span
+                            style="padding:5px 10px;background:#f66;color:white;">警告：</span>无论你想实现什么效果，要想正常使用，该元素class属性中必须首先有lazyfade类名，你可以把它理解成一个供js识别的标识符，但事实上不仅如此，单独使用它也是有意义的。
+                    </p>
+                    <p class="lazyfade fadein-right" style="line-height:2em;font-size:18px;font-weight:bold;color:#7f8c8d;background:#eee;"><span
+                            style="padding:5px 10px;background:#73abfe;color:white;">注意：</span>在你使用-r类型的效果时，fadein（淡入）过程中设置了一个时间死区，在此期间不再会出现fadeout（淡出）。
+                    </p>
+                </div>
+                <div class="lazyfade fadein-bottom"
+                    style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:flex-start;width:100%;font-size:20px;">
+                    <ul style="width:100%;background:#eee;">
+                        <li style="line-height:2em;">lazyfade: 必须具备的类名。如果只有lazyfade，则是在只在原处逐渐显示。</li>
+                        <li style="line-height:2em;">fadein-left: 从左到右移入，并逐渐显示</li>
+                        <li style="line-height:2em;">fadein-right: 从右到左移入，并逐渐显示</li>
+                        <li style="line-height:2em;">fadein-top: 从上到下移入，并逐渐显示</li>
+                        <li style="line-height:2em;">fadein-bottom: 从下到上移入，并逐渐显示</li>
+                        <li style="line-height:2em;">zoomin: 由小变大</li>
+                    </ul>
+                    <ul style="width:100%;background:#eee;">
+                        <li style="line-height:2em;">lazyfade-r: 当元素出现在可视窗口时，只在原处逐渐显示；当元素离开可视窗口时，只在原处逐渐消失。</li>
+                        <li style="line-height:2em;">fadein-left-r: 当元素出现在可视窗口时，从左到右移入，并逐渐显示；当元素离开可视窗口时，从右到左移出，并逐渐消失。</li>
+                        <li style="line-height:2em;">fadein-right-r: 当元素出现在可视窗口时，从右到左移入，并逐渐显示；当元素离开可视窗口时，从左到右移出，并逐渐消失。</li>
+                        <li style="line-height:2em;">fadein-top-r: 当元素出现在可视窗口时，从上到下移入，并逐渐显示；当元素离开可视窗口时，从下到上移出，并逐渐消失。</li>
+                        <li style="line-height:2em;">fadein-bottom-r: 当元素出现在可视窗口时，从下到上移入，并逐渐显示；当元素离开可视窗口时，从上到下移出，并逐渐消失。</li>
+                        <li style="line-height:2em;">zoomin-r: 当元素出现在可视窗口时，由小变大；当元素离开可视窗口时，由大变小并消失。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
