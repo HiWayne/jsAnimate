@@ -194,11 +194,12 @@ var jsAnimate = function () {
         //显示初始圆点颜色
         showColor(currentIndex)
         //直接在渲染节点的函数里计算宽度是1920, 因为节点还未完全渲染, 实际是1903, 所以延迟计算
-        setTimeout(function () {
+        eventListener(window, "load", scrollDistance)
+        function scrollDistance() {
             imgWidth = caculateWidth(node)
             //刷新页面后滚动距离回归实际第一张图片位置
             divWrap.scrollLeft = imgWidth
-        }, 100)
+        }
         //在窗口变化时自动更新width
         eventListener(window, "resize", function () {
             imgWidth = caculateWidth(node)
