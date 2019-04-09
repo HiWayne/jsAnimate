@@ -857,7 +857,7 @@ var jsAnimate = function () {
                                 delay = compelateTime(object)
                                 //如果有动画，需要算上动画时间
                                 if (object.duration.animation) {
-                                    var animationTime = (parseFloat(getComputedStyle(object.node,null).getPropertyValue(‘animationDuration’)) || 0) + (parseFloat(getComputedStyle(object.node,null).getPropertyValue(‘animationDelay’)) || 0)
+                                    var animationTime = (parseFloat(getComputedStyle(object.node,null).getPropertyValue('animationDuration')) || 0) + (parseFloat(getComputedStyle(object.node,null).getPropertyValue('animationDelay')) || 0)
                                     delay = parseFloat(delay) + animationTime
                                 }
                             }
