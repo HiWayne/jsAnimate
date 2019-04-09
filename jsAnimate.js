@@ -855,9 +855,9 @@ var jsAnimate = function () {
                             }
                             else {
                                 delay = compelateTime(object)
-                                //如果动画时间不是内联式写的，这种方法识别不了
+                                //如果有动画，需要算上动画时间
                                 if (object.duration.animation) {
-                                    var animationTime = parseFloat(object.node.style.animationDuration) + parseFloat(object.node.style.animationDelay)
+                                    var animationTime = (parseFloat(getComputedStyle(object.node,null).getPropertyValue(‘animationDuration’)) || 0) + (parseFloat(getComputedStyle(object.node,null).getPropertyValue(‘animationDelay’)) || 0)
                                     delay = parseFloat(delay) + animationTime
                                 }
                             }
