@@ -1,5 +1,5 @@
-# jsAnimate（只需一个js即可简洁的实现轮播图、旋转木马、懒加载等特效，可在页面任一处复用，所有方法都在jsAnimate对象中）
-<h2>更新时间updata: 2019.4.3&nbsp;&nbsp;&nbsp;&nbsp;懒加载过渡效果增加功能<a href="https://hiwayne.github.io/jsAnimate/lazyfade.html">lazyfade（点击查看教程）</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在你可以通过在元素标签里加入duration属性，以显式的定制进入和移出的持续时间、延迟时间、时间函数。比如，我们可以拥有一个精心编排的一系列过渡效果，其中一些嵌套的内部元素相比于过渡效果的根元素有延迟的或更长的过渡效果。同时还可以搭配自定义动画效果使用，可以引入第三方动画库。duration属性的某些用法参考了vue的设计。所以用过vue的同学可能会比较容易上手。</h2>
+# jsAnimate（只需一个js即可简洁的实现轮播图、旋转木马、懒加载动画等特效，可在页面任一处复用，所有方法都在jsAnimate对象中）
+<h2>更新时间updata: 2019.4.3&nbsp;&nbsp;&nbsp;&nbsp;懒加载过渡效果增加功能<a href="https://hiwayne.github.io/jsAnimate/lazyfade.html">lazyfade（点击查看教程）</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在你可以通过在元素标签里加入duration属性，以显式的定制进入和移出的持续时间、延迟时间、贝塞尔曲线(或ease等)。比如，我们可以拥有一个精心编排的一系列过渡效果，其中一些嵌套的内部元素相比于过渡效果的根元素有延迟的或更长的过渡效果。同时还可以搭配自定义动画效果使用，可以引入第三方动画库。duration属性的某些用法参考了vue的设计。所以用过vue的同学可能会比较容易上手。</h2>
 <h3>更新时间updata: 2019.3.20&nbsp;&nbsp;&nbsp;&nbsp;新增功能--新增类似animate.css的懒加载过渡效果: 只需引入jsAnimate.js，然后在你想要的元素class属性里加入相关的类名即可，具体类名对应的效果以及使用中的注意事项，<a href="https://hiwayne.github.io/jsAnimate/lazyfade.html">点击查看lazyfade.html中的演示教程</a>，或下载该repository。<br />
   --2019.3.26 新增放大过渡，类名：zoomin、zoomin-r。</h3><br /><br />
 <h3>更新时间update: 2019.3.17&nbsp;&nbsp;&nbsp;&nbsp;新增功能--新增旋转木马效果：方法名jsAnimate.slick。旋转木马插件, 同样只需引入一行js, 可自定义滚动的速度、一页的展示数量、高度、一次滚动一个还是一整页(默认是一次滚动一个)、展示区域内的元素按行还是列排列(默认是列)、是否支持图片缩放。<a href="https://hiwayne.github.io/jsAnimate/slick.html">点击查看演示教程slick.html</a>，或下载该repository。</h3><br /><br />
