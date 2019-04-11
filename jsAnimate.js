@@ -373,7 +373,7 @@ var jsAnimate = function () {
         //长宽比例系数, 刷新率, 限制点击频率, 临时储存定时器, ul长度, 当前滚动张数
         var scale, refresh = 10, debounce, tempMoveTimeout, ulWidth, currentIndex = 0
         //添加node样式
-        node.style.cssText = "position:relative;margin:0;padding:0 45px;overflow:hidden;width:100%;height:" + height + "px;"
+        node.style.cssText = "position:relative;margin:0;padding:0 45px;overflow:hidden;height:" + height + "px;"
         //创建文档片段
         var fragment = document.createDocumentFragment()
         //创建滚动div
