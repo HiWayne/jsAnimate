@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html style="height:100%;">
+
+<head>
+    <meta charset="utf-8">
+    <title>lazyFade</title>
+    <link type="text/css" rel="stylesheet" href="./animate.min.css">
+    <script type="text/javascript" src="jsAnimate.js"></script>
+    <style>
+        .rotate360 {
+            animation: rotate 1s ease-in-out;
+        }
+
+        @keyframes rotateY {
+            from {
+                -webkit-transform: rotateZ(0deg);
+                -ms-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                -webkit-transform: rotateZ(360deg);
+                -ms-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+            }
+        }
+        
+        @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotateZ(0deg);
+                -ms-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                -webkit-transform: rotateZ(360deg);
+                -ms-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @-ms-keyframes rotateY {
+            from {
+                -webkit-transform: rotateZ(0deg);
+                -ms-transform: rotateZ(360deg);
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                -webkit-transform: rotateZ(360deg);
+                -ms-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="font-family:'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;color:#7f8c8d;font-size:16px;height:100%;">
+    <div style="width:100%;height:100%;">
+        <div style="margin:0 auto;max-width:1400px;height:100%;">
+            <!--lazyLoad fadein-left fadein-right-->
+            <div
+                style="display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;width:100%;height:100%;text-align:center;">
+                <div>
+                    <p class="lazyfade zoomin" style="font-size: 36px;font-weight:bold;color:rgb(79, 192, 141);">
+                        懒加载过渡动画效果演示DEMO
+                    </p>
+                    <p class="lazyfade fadein-left" style="font-size: 18px;font-weight:bold;color:rgb(79, 192, 141);">
+                        懒加载：即窗口滚动到目标处才会执行相应动作。
+                    </p>
+                </div>
+                <div class="lazyfade fadein-right"><img width="600px;"
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553065422746&di=079d2d36c51c29784eea24f4ca7503e5&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F35%2F60%2F77t58PICIRG_1024.jpg">
+                </div>
+            </div>
+            <!--lazyLoad fadein and fadeout-->
+            <div
+                style="display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;width:100%;height:100%;">
+                <div class="lazyfade fadein-left-r" duration="{animation: animated swing, type: transition}"><img
+                        width="600px"
+                        src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4050501865,65806546&fm=26&gp=0.jpg">
+                </div>
+                <div class="lazyfade fadein-right-r">
+                    <p style="padding:0 30px;font-size:20px;font-weight:bold;color:rgb(79, 192, 141);line-height:2em;">
+                        你只需引入jsAnimate.js文件，然后在你期望的元素class属性中加入lazyfade、fadein-left等类名，即可实现效果。值得注意的是，js仅当所有网页文档加载完成后才会执行，所以可能会有些延迟，不过请放心，在js没有执行之前，网页所有元素都会暂时先正常显示在该在的位置。下面我将具体解释不同类名对应的效果。<span
+                            style="background:#f1f502;">这段文字使用了fadein-right-r效果，它左边的图片使用了fadein-left-r并与animate.css的swing结合使用，并且设定先执行过渡效果后执行动画。</span>
+                    </p>
+                </div>
+            </div>
+            <!--lazyLoad fadein-bottom-->
+            <div
+                style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;width:100%;height:100%;">
+                <div>
+                    <p class="lazyfade fadein-left"
+                        style="margin-bottom:10px;line-height:2em;font-size:18px;font-weight:bold;color:#7f8c8d;background:#eee;">
+                        <span
+                            style="padding:5px 10px;background:#f66;color:white;">警告：</span>无论你想实现什么效果，要想正常使用，该元素class属性中必须首先有lazyfade类名，你可以把它理解成一个供js识别的标识符。
+                    </p>
+                    <p class="lazyfade fadein-right"
+                        style="line-height:2em;font-size:18px;font-weight:bold;color:#7f8c8d;background:#eee;"><span
+                            style="padding:5px 10px;background:#73abfe;color:white;">注意：</span>在你使用-r类型的效果时，fadein（淡入）过程中设置了一个时间死区，在此期间不再会出现fadeout（淡出）。
+                    </p>
+                </div>
+                <div class="lazyfade fadein-bottom"
+                    style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;width:100%;font-size:18px;">
+                    <div style="margin-top: 10px;background: #eef10d;text-align:center;">下方的这些列表使用了fadein-bottom效果</div>
+                    <ul style="width:100%;background:#eee;">
+                        <li style="line-height:2em;">lazyfade: 必须具备的类名。</li>
+                        <li style="line-height:2em;">fadein-left: 从左到右移入，并逐渐显示</li>
+                        <li style="line-height:2em;">fadein-right: 从右到左移入，并逐渐显示</li>
+                        <li style="line-height:2em;">fadein-top: 从上到下移入，并逐渐显示</li>
+                        <li style="line-height:2em;">fadein-bottom: 从下到上移入，并逐渐显示</li>
+                        <li style="line-height:2em;">zoomin: 由小变大</li>
+                    </ul>
+                    <ul style="width:100%;background:#eee;">
+                        <li style="line-height:2em;">lazyfade-r: 当元素出现在可视窗口时，只在原处逐渐显示；当元素离开可视窗口时，只在原处逐渐消失。</li>
+                        <li style="line-height:2em;">fadein-left-r: 当元素出现在可视窗口时，从左到右移入，并逐渐显示；当元素离开可视窗口时，从右到左移出，并逐渐消失。
+                        </li>
+                        <li style="line-height:2em;">fadein-right-r: 当元素出现在可视窗口时，从右到左移入，并逐渐显示；当元素离开可视窗口时，从左到右移出，并逐渐消失。
+                        </li>
+                        <li style="line-height:2em;">fadein-top-r: 当元素出现在可视窗口时，从上到下移入，并逐渐显示；当元素离开可视窗口时，从下到上移出，并逐渐消失。
+                        </li>
+                        <li style="line-height:2em;">fadein-bottom-r: 当元素出现在可视窗口时，从下到上移入，并逐渐显示；当元素离开可视窗口时，从上到下移出，并逐渐消失。
+                        </li>
+                        <li style="line-height:2em;">zoomin-r: 当元素出现在可视窗口时，由小变大；当元素离开可视窗口时，由大变小并消失。</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 10px;background: #eef10d;text-align:center;">
+                    2019.3.30新增：你现在可以通过向元素标签添加duration属性来定义不同的时间顺序和动画，来精心编排出精美有趣的效果，详见新增部分</div>
+                <div class="lazyfade zoomin fadein-bottom" duration="{enter: 2s}"
+                    style="padding: 10px;width: 240px;height: 60px;line-height: 60px;text-align: center;background: rgb(245, 65, 65);cursor: pointer;border-radius:20px;">
+                    <a href="#duration"
+                        style="display:inline-block;width: 100%;height: 100%;color: white;text-decoration: none;">以下为新增的duration属性：点我</a>
+                </div>
+            </div>
+            <!--duration-->
+            <div id="duration"
+                style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;padding: 50px 0;width:100%;height: 100%;">
+                <div style="display:flex;justify-content:space-between;align-items: center;">
+                    <div style="flex:0 1 auto;" class="lazyfade fadein-left"><img
+                            style="display:inline-block;width: 500px;"
+                            src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554292615934&di=b7739f9904261057885fdea44eae700b&imgtype=0&src=http%3A%2F%2Fpic.qjimage.com%2Fmhrf006%2Fhigh%2Fmhrf-cpmh-88097f35z.jpg"></div>
+                    <div style="flex:0 1 auto;margin-left: 50px;color: #34495e;">
+                        <p class="lazyfade fadein-right" style="width: 100%;font-size: 18px;line-height: 1.5em;"
+                            duration="{ enter: 3000 }"><span
+                                style="color: white;background: rgb(245, 65, 65);">新增：</span>你现在可以通过在元素标签里加入duration属性，以显式的定制进入和移出的持续时间、延迟时间、贝塞尔曲线等时间函数。比如，我们可以拥有一个精心编排的一系列过渡效果，其中一些嵌套的内部元素相比于过渡效果的根元素有延迟的或更长的过渡效果。同时还可以搭配动画效果使用，兼容第三方动画库。duration属性的某些用法参考了vue的设计。所以用过vue的用户可以会比较容易上手。<span
+                                style="background: #eef10d;">下面的代码将更晚出现，且动作似乎有些特殊，显示的即是它所用的代码</span></p>
+                        <p class="lazyfade fadein-right"
+                            duration="{ enter: 1500, leave: 800, delay: 1500, bezier: cubic-bezier(.34,.41,.5,1.92) }"
+                            style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;line-height: 50px;text-align: center;font-size:14px;font-weight: 600;width: 100%;">
+                            <code><span style="color:#2973b7;">&lt;div...duration=<span style="color:#42b983;">"{ enter: 1500, leave: 800, delay: 1500, bezier: cubic-bezier(.34,.41,.5,1.92) }"</span>&gt;...&lt;/div&gt;</span></code>
+                        </p>
+                        <p class="lazyfade fadein-right" duration="{ enter: 3000 }"
+                            style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;line-height: 50px;text-align: center;font-size:14px;font-weight: 600;width: 100%;">
+                            <code><span style="color:#2973b7;">enter: 进入过渡的时间; leave: 离开过渡的时间; delay: 效果延迟时间; bezier: 贝塞尔曲线(或ease等)</span></code>
+                        </p>
+                        <p class="lazyfade fadein-right" duration="{ enter: 3000 }"
+                            style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;text-align: center;font-size:14px;font-weight: 600;width: 100%;">
+                            <code><span style="color:#2973b7;">如果时间不加单位默认毫秒(ms)，字符串不需要加引号。如果没有duration默认是transtion: all 1s ease 0s，如果有用户自定义属性duration或者有原生style样式，那么以它们为准；如果duration和原生style都存在, 会取代原生style以duration为准。</span></code>
+                        </p>
+                    </div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <p class="lazyfade fadein-right" duration="{ enter: 3000 }"
+                        style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;line-height:50px;text-align: center;font-size:20px;font-weight: 600;width: 100%;">
+                        <code><span style="color:#37bb80;">下面将讲解如何使用动画效果animation，以及如何与过渡效果结合使用</span></code>
+                    </p>
+                </div>
+            </div>
+            <div
+                style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;width:100%;height: 100%;">
+                <div style="font-size: 20px;color:#34495e;background:#eee;">
+                    <p>同时除了过渡效果外，你还可以添加自定义动画。这对于过渡系统和其他第三方 CSS 动画库，如 Animate.css 结合使用十分有用。</p>
+                </div>
+                <div>
+                    <p class="lazyfade fadein-left" duration="{ animation: animated tada, type:transition }"
+                        style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;line-height: 50px;text-align: center;font-size:20px;font-weight: 600;width: 100%;">
+                        <code><span style="color:#2973b7;">&lt;div class="lazyfade fadein-left" duration=<span style="color:#42b983;">"{ animation: animated tada, type: transition }"</span>&gt;...&lt;/div&gt;</span></code>
+                    </p>
+                </div>
+                <div style="font-size: 20px;color:#34495e;">
+                    <p style="text-indent:2em;background:#eee;">
+                        你可以像上面这段代码一样，在animation里添加动画相关的类名，来实现动画效果，多个类名之间用空格隔开。除了使用第三方动画库，你也可以使用自己编写的动画(<span><a style="color:#42b983;text-decoration: none;" href="#style">如最后的例子</a></span>)不过我建议你先接着往下看。<span
+                            style="background:#eef10d;">你需要注意animation中添加的是类名而不是keyframes名</span>。</p>
+                    <p style="text-indent:2em;background:#eee;">如果你的代码里，过渡效果（如class="lazyfade
+                        fadein-left"）和动画效果（如duration="{ animation: animated tada }"）同时存在。你可能会想，这两者会不会有冲突，它们的先后顺序怎么定义呢？</p>
+                    <p style="text-indent:2em;background:#eee;">放心！<span
+                            style="background:#eef10d;">首先</span>，jsAnimate自动帮你解决了冲突，由于transform和animation不能共存，js会在目标元素外层创建一个新的父元素，让这个父元素执行transform，原先的元素只执行animation。
+                    </p>
+                    <P style="text-indent:2em;background:#eee;"><span
+                            style="background:#eef10d;">其次</span>，关于执行顺序问题。在一些场景中，你需要给同一个元素同时设置两种过渡动效，比如 animation
+                        很快的被触发并完成了，而 transition 效果还没结束。在这种情况中，你就需要使用 type 特性并设置 animation 或 transition 来明确声明你需要监听的类型。
+                    </P>
+                    <P style="text-indent:2em;background:#eee;">像上面的代码一样，<span style="background:#eef10d;">当type:
+                            transition时</span>，先执行过渡效果，结束后执行动画效果；<span style="background:#eef10d;">当type:
+                            animation时</span>，先执行动画效果，结束后执行过渡效果；如果不设置type，两种效果将同时执行。</P>
+                    <p style="text-indent:2em;background:#eee;">
+                        有时，某个元素的效果执行时间可能会依赖其他元素的完成时间。这时虽然你可以使用delay属性设置延迟时间，来达到其他元素效果完成后该元素才动的目的；但是，当这种依赖关系很多时，通过delay属性来设置延迟会显得非常麻烦、复杂且容易出错。<span
+                            style="background:#eef10d;">下面将推荐duration中的标记属性，让你可以绑定元素之间的时间依赖关系，不需要手动计算延迟</span>。
+                    </p>
+                </div>
+            </div>
+            <div
+                style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;width:100%;height: 100%;">
+                <div style="font-size: 20px;color:#34495e;text-indent:2em;background:#eee;">
+                    如果你想指定一个元素在另一个元素效果完成后再执行效果，那么你可以在这个元素的duration里增加follow: follow1，另一个元素的duration增加target:
+                    target1，这样该元素（follow）就会跟随目标元素（target）的完成时间去执行动画了。你只需要保证follow后面的字符和target后面的字符一样即可，例如 follow:
+                    follow$123 与 target: target$123 之间就是时间绑定关系。而且设置了follow的元素也可以设置target以供其他元素依赖它的完成时间。
+                </div>
+                <div style="margin-top: 30px;font-size: 20px;color:#34495e;text-indent:2em;background:#eee;">
+                    follow和target是为了更方便的让有时间依赖关系的元素按序执行，如果你觉得理解困难或者使用不方便，你大可以继续使用duration: { delay: xxx }来手动计算时间
+                </div>
+                <div
+                    style="margin-top: 30px;padding:10px;font-size:20px;font-weight:600;background: rgb(245, 65, 65);cursor: pointer;border-radius:20px;">
+                    <a href="#style"
+                        style="display:inline-block;width: 100%;height: 100%;color: white;text-decoration: none;">看完所有，你可以用它们编排一些有趣精美的、互相关联的效果，例如下面这个</a>
+                </div>
+                <div
+                    style="margin-top:10px;padding:10px;font-size:20px;font-weight:600;background: rgb(245, 65, 65);cursor: pointer;border-radius:15px;">
+                    <a href="#style"
+                        style="display:inline-block;width: 100%;height: 100%;color: white;text-decoration: none;">点击前往</a>
+                </div>
+            </div>
+            <div id="style"
+                style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;padding: 50px 0;width:100%;height: 100%;">
+                <div style="position:relative;width:400px;height:400px;" class="lazyfade"
+                    duration="{animation:rotate360, type:transition, follow:follow1, target: target2}">
+                    <img class="lazyfade fadein-top" duration="{ enter: 1.5s, delay: 0.5s }"
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553944924316&di=4825216a688f637120ee6400bf19643f&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F-vo3dSag_xI4khGko9WTAnF6hhy%2Flvpics%2Fw%3D300%3Br%3D270%2Fsign%3D48c50cad9458d109c4e3afb2e163be82%2F4afbfbedab64034fed61add5a9c379310b551db0.jpg"
+                        width="134px" height="200px" style="position:absolute;top:0;left:66.66px;">
+                    <img class="lazyfade fadein-right" duration="{ enter: 1.5s, delay: 1s }"
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553944541766&di=e810b188f5fee59fc4f6a371fa96e924&imgtype=0&src=http%3A%2F%2Fg-search1.alicdn.com%2Fimg%2Fbao%2Fuploaded%2Fi3%2F1637183645%2FTB2OYB6olfH8KJjy1XbXXbLdXXa_%2521%25211637183645.jpg_300x300.jpg"
+                        width="200px" height="134px" style="position:absolute;top:66.66px;left:200px;">
+                    <img class="lazyfade fadein-bottom" duration="{ enter: 1.5s, delay: 1.5s }"
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553944718522&di=752aa5bc8e61dd73b8534914d75fd564&imgtype=0&src=http%3A%2F%2Fsource.cppfoto.com%2Fimage%2F2019%2F054%2F15%2F9b13c0136138472881e339de298020d7_ls.jpg"
+                        width="133.3px" height="200px" style="position:absolute;top:200px;left:200px;">
+                    <img class="lazyfade fadein-left" duration="{ enter: 1.5s, delay: 2s, target:target1 }"
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553944590434&di=a0b2747145129f60ffb8d97186d55931&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20111228%2Fbki-20111228222618-397669555.jpg"
+                        width="200px" height="133.3px" style="position:absolute;top:200px;left:0;">
+                </div>
+                <div style="margin-top:30px;font-size:24px;font-weight:500;color:#42b983;" class="lazyfade zoomin"
+                    duration="{ follow: follow2 }">现在限制你的只有想象力，用它做一些有趣的事情把^~^</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
