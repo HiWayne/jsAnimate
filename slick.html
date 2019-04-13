@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>slick</title>
+    <script type="text/javascript" src="jsAnimate.js"></script>
+</head>
+
+<body>
+    <div id="slick">
+        <a class="partenaires_scroll_list_item_a"><img
+                src="http://n1.itc.cn/img8/wb/recom/2016/08/18/147145008352231142.GIF">案例1</a>
+        <a class="partenaires_scroll_list_item_a"><img
+                src="http://5b0988e595225.cdn.sohucs.com/images/20180920/12fdd94f223a47828614f839c402e563.gif">案例2</a>
+        <a class="partenaires_scroll_list_item_a"><img
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553146264376&di=7e833c587e840599e83dfddd127d6865&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201501%2F24%2F20150124152506_nGWZB.thumb.224_0.gif">案例3</a>
+        <a class="partenaires_scroll_list_item_a"><img
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553146308829&di=5b913cc083751b6a8cf247db7f4f6f24&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201806%2F14%2F20180614170555_KFKsH.thumb.224_0.gif">案例4</a>
+        <a class="partenaires_scroll_list_item_a"><img
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553741137&di=8e6c8d812267bbbea999a1204d3019c4&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160706%2F58cb87fa2b5a4c5dad53002dc12d763d.jpg">案例5</a>
+        <a class="partenaires_scroll_list_item_a"><img
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553741202&di=18d7a9ffcaea7ff8d8b3764d6cc73381&imgtype=jpg&er=1&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201605%2F15%2F20160515032156_ezFPN.thumb.224_0.gif">案例6</a>
+        <a class="partenaires_scroll_list_item_a"><img
+                src="http://image001.fuwuqizhijia.com/20170321/8be9fb1e996dad1eb13a8393cfdc0563.gif">案例7</a>
+        <a class="partenaires_scroll_list_item_a"><img
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553146555767&di=16a0d341e7639f2aa89516fcceefbe77&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170228%2Fc583e2834ac046a8828453e0f1307cbf.gif">案例8</a>
+    </div>
+    <script>
+        /*旋转木马插件, 只需引入一行js, 可自定义滚动的速度、一页的展示数量、高度、一次滚动一个还是一整页(默认是一次滚动一个)、展示区域内的元素按行还是列排列(默认是列)、是否支持图片缩放
+          根元素内的子元素的后代元素们必须只有一个根元素
+          *@method slick
+          *@for jsAnimate
+          *@param {object}
+
+            方法的参数类型是对象，对象中可包含：
+            1.根元素节点, 
+            2.滚动切换的速度, 
+            3.一页的展示数量, 
+            4.整体高度, 
+            5.一次滚动一个还是一整页(true是一整页,若想设置下一个参数,该参数不可省略), 
+            6.展示区域内元素排列方式(false或"column"是按列,其他运算结果为true的是按行), 
+            7.是否支持图片移入缩放
+            8.是否自动轮播
+            9.轮播间隔时间
+
+          *@return {object}
+            方法返回一个根元素对象
+        */
+        jsAnimate.slick({
+            id: "slick",// 字符串类型，根元素id，不可省略
+            speed: 0.3,// 数字类型，切换速度，可省略，默认是0.3秒完成切换
+            number: 5,// 数字类型，页面展示数量，可省略，默认是展示5个
+            height: 150,// 数字类型，自定义元素高度，可省略，默认是120px
+            quick: false,// 布尔类型，是否整页滚动，可省略，默认是单个滚动
+            row: "column",// 布尔类型或字符串类型，展示区域的排列方式，false或"column"是按列,其他运算结果为true的是按行，可省略，默认是按列
+            imgScale: true,// 布尔类型， 是否支持鼠标移入时图片放大，可省略，默认是不支持
+            //autoSlide: true,// 布尔类型，是否自动轮播，可省略，默认不轮播
+            //intervalTime: 2000// 数字类型，轮播间隔时间，在轮播状态下省略时，默认2000(间隔2秒轮播)
+        })
+    </script>
+</body>
+
+</html>
