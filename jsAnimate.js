@@ -918,7 +918,7 @@ var jsAnimate = function () {
                     else {
                         throw new Error("the attribute of element should be follow + ...")
                     }
-                    lazyNodeArray.forEach(function (object) {
+                    lazyNodeArray.forEach(function (object, index) {
                         if (object.duration.target && object.duration.target === 'target' + postfix) {
                             if (targetIndex) {
                                 throw new Error("redeclaration of target")
