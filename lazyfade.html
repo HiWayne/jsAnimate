@@ -175,14 +175,14 @@
                 <div style="margin-top: 30px;">
                     <p class="lazyfade fadein-right" duration="{ enter: 3000 }"
                         style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;line-height:50px;text-align: center;font-size:20px;font-weight: 600;width: 100%;">
-                        <code><span style="color:#37bb80;">下面将讲解如何使用动画效果animation，以及如何与过渡效果结合使用</span></code>
+                        <code><span style="color:#37bb80;">下面将讲解如何使用duration中的动画效果，以及如何与过渡效果结合使用</span></code>
                     </p>
                 </div>
             </div>
             <div
                 style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;width:100%;height: 100%;">
                 <div style="font-size: 20px;color:#34495e;background:#eee;">
-                    <p>同时除了过渡效果外，你还可以添加自定义动画。这对于过渡系统和其他第三方 CSS 动画库，如 Animate.css 结合使用十分有用。</p>
+                    <p>除了过渡效果外，你还可以向其中添加自定义动画。这对于过渡系统和其他第三方 CSS 动画库，如 Animate.css 结合使用十分有用。</p>
                 </div>
                 <div>
                     <p class="lazyfade fadein-left" duration="{ animation: animated tada, type:transition }"
@@ -192,12 +192,12 @@
                 </div>
                 <div style="font-size: 20px;color:#34495e;">
                     <p style="text-indent:2em;background:#eee;">
-                        你可以像上面这段代码一样，在animation里添加动画相关的类名，来实现动画效果，多个类名之间用空格隔开。除了使用第三方动画库，你也可以使用自己编写的动画(<span><a style="color:#42b983;text-decoration: none;" href="#style">如最后的例子</a></span>)不过我建议你先接着往下看。<span
+                        你可以像上面这段代码一样，在duration中的animation属性里添加动画相关的类名，来实现动画效果，多个类名之间用空格隔开。除了使用第三方动画库，你也可以使用自己编写的动画(<span><a style="color:#42b983;text-decoration: none;" href="#style">如最后的例子</a></span>)不过我建议你先接着往下看。<span
                             style="background:#eef10d;">你需要注意animation中添加的是类名而不是keyframes名</span>。</p>
                     <p style="text-indent:2em;background:#eee;">如果你的代码里，过渡效果（如class="lazyfade
                         fadein-left"）和动画效果（如duration="{ animation: animated tada }"）同时存在。你可能会想，这两者会不会有冲突，它们的先后顺序怎么定义呢？</p>
                     <p style="text-indent:2em;background:#eee;">放心！<span
-                            style="background:#eef10d;">首先</span>，jsAnimate自动帮你解决了冲突，由于transform和animation不能共存，js会在目标元素外层创建一个新的父元素，让这个父元素执行transform，原先的元素只执行animation。
+                            style="background:#eef10d;">首先</span>，jsAnimate帮你解决了冲突问题，由于transform和animation不能共存，js会在目标元素外层创建一个新的父元素，让这个父元素执行transform，原先的元素只执行animation。
                     </p>
                     <P style="text-indent:2em;background:#eee;"><span
                             style="background:#eef10d;">其次</span>，关于执行顺序问题。在一些场景中，你需要给同一个元素同时设置两种过渡动效，比如 animation
@@ -205,10 +205,10 @@
                     </P>
                     <P style="text-indent:2em;background:#eee;">像上面的代码一样，<span style="background:#eef10d;">当type:
                             transition时</span>，先执行过渡效果，结束后执行动画效果；<span style="background:#eef10d;">当type:
-                            animation时</span>，先执行动画效果，结束后执行过渡效果；如果不设置type，两种效果将同时执行。离开过渡时它们会以相反的顺序执行。</P>
+                            animation时</span>，先执行动画效果，结束后执行过渡效果；如果不设置type，两种效果将同时执行。当离开过渡时，它们会以相反的顺序执行。</P>
                     <p style="text-indent:2em;background:#eee;">
-                        有时，某个元素的效果执行时间可能会依赖其他元素的完成时间。这时虽然你可以使用delay属性设置延迟时间，来达到其他元素效果完成后该元素才动的目的；但是，当这种依赖关系很多时，通过delay属性来设置延迟会显得非常麻烦、复杂且容易出错。<span
-                            style="background:#eef10d;">下面将推荐duration中的标记属性，让你可以绑定元素之间的时间依赖关系，不需要手动计算延迟</span>。
+                        有时，某个元素的效果开始执行的时间可能会依赖其他元素的完成时间。这时虽然你可以使用delay属性设置延迟时间，来达到其他元素效果完成后该元素才动的目的；但是，当这种依赖关系很多时，通过delay属性来设置延迟会显得非常麻烦、复杂且容易出错。<span
+                            style="background:#eef10d;">下面将推荐duration中的标记属性，让你可以绑定元素之间的时间依赖关系，不需要手动计算</span>。
                     </p>
                 </div>
             </div>
@@ -218,6 +218,16 @@
                     如果你想指定一个元素在另一个元素效果完成后再执行效果，那么你可以在这个元素的duration里增加follow: follow1，另一个元素的duration增加target:
                     target1，这样该元素（follow）就会跟随目标元素（target）的完成时间去执行动画了。你只需要保证follow后面的字符和target后面的字符一样即可，例如 follow:
                     follow$123 与 target: target$123 之间就是时间绑定关系。而且设置了follow的元素也可以设置target以供其他元素依赖它的完成时间。
+                </div>
+                <div>
+                    <p style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;line-height: 50px;text-align: center;font-size:20px;font-weight: 600;width: 100%;">
+                        <code>比如：<span style="color:#2973b7;">&lt;div...duration=<span style="color:#42b983;">"{ follow: follow1 }"</span>&gt;...&lt;/div&gt;</span>依赖了</code>
+                    </p>
+                </div>
+                <div>
+                    <p style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;line-height: 50px;text-align: center;font-size:20px;font-weight: 600;width: 100%;">
+                        <code><span style="color:#2973b7;">&lt;div...duration=<span style="color:#42b983;">"{ target: target1 }"</span>&gt;...&lt;/div&gt;</span>的完成时间</code>
+                    </p>
                 </div>
                 <div style="margin-top: 30px;font-size: 20px;color:#34495e;text-indent:2em;background:#eee;">
                     follow和target是为了更方便的让有时间依赖关系的元素按序执行，如果你觉得理解困难或者使用不方便，你大可以继续使用duration: { delay: xxx }来手动计算时间
