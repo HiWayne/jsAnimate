@@ -905,6 +905,7 @@ var jsAnimate = function () {
             //enter-to
             function enterTo(lazyNode) {
                 var delay = 0
+                var targetIndex
                 if (lazyNode.delay) {
                     delay = lazyNode.delay
                 }
@@ -919,6 +920,10 @@ var jsAnimate = function () {
                     }
                     lazyNodeArray.forEach(function (object) {
                         if (object.duration.target && object.duration.target === 'target' + postfix) {
+                            if (targetIndex) {
+                                throw new Error("redeclaration of target")
+                            }
+                            targetIndex = index
                             if (object.delay) {
                                 delay = parseFloat(object.delay) + (object.duration.enter || 1000)
                             }
