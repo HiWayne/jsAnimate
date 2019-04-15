@@ -84,7 +84,7 @@
                 <div class="lazyfade fadein-right-r">
                     <p style="padding:0 30px;font-size:20px;font-weight:bold;color:rgb(79, 192, 141);line-height:2em;">
                         你只需引入jsAnimate.js文件，然后在你期望的元素class属性中加入lazyfade、fadein-left等类名，即可实现效果。值得注意的是，js仅当所有网页文档加载完成后才会执行，所以可能会有些延迟，不过请放心，在js没有执行之前，网页所有元素都会暂时先正常显示在该在的位置。下面我将具体解释不同类名对应的效果。<span
-                            style="background:#f1f502;">这段文字使用了fadein-right-r效果，它左边的图片使用了fadein-left-r并与animate.css的swing结合使用，并且设定先执行过渡效果后执行动画。</span>
+                            style="background:#f1f502;">这段文字使用了fadein-right-r效果，它左边的图片使用了fadein-left-r并与animate.css的swing结合使用，并且设定了type，从而先执行过渡效果后执行动画。</span>
                     </p>
                 </div>
             </div>
@@ -219,12 +219,12 @@
                     target1，这样该元素（follow）就会跟随目标元素（target）的完成时间去执行动画了。你只需要保证follow后面的字符和target后面的字符一样即可，例如 follow:
                     follow$123 与 target: target$123 之间就是时间绑定关系。而且设置了follow的元素也可以设置target以供其他元素依赖它的完成时间。
                 </div>
-                <div>
+                <div class="lazyfade fadein-right" duration="{ follow: follow1 }">
                     <p style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;line-height: 50px;text-align: center;font-size:20px;font-weight: 600;width: 100%;">
                         <code>比如：<span style="color:#2973b7;">&lt;div...duration=<span style="color:#42b983;">"{ follow: follow1 }"</span>&gt;...&lt;/div&gt;</span>依赖了</code>
                     </p>
                 </div>
-                <div>
+                <div class="lazyfade fadein-right" duration="{ target: target1 }">
                     <p style="font-family: 'Roboto Mono', Monaco, courier, monospace;background: #f8f8f8;height: 50px;line-height: 50px;text-align: center;font-size:20px;font-weight: 600;width: 100%;">
                         <code><span style="color:#2973b7;">&lt;div...duration=<span style="color:#42b983;">"{ target: target1 }"</span>&gt;...&lt;/div&gt;</span>的完成时间</code>
                     </p>
