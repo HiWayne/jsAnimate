@@ -84,7 +84,7 @@
                 <div class="lazyfade fadein-right-r">
                     <p style="padding:0 30px;font-size:20px;font-weight:bold;color:rgb(79, 192, 141);line-height:2em;">
                         你只需引入jsAnimate.js文件，然后在你期望的元素class属性中加入lazyfade、fadein-left等类名，即可实现效果。值得注意的是，js仅当所有网页文档加载完成后才会执行，所以可能会有些延迟，不过请放心，在js没有执行之前，网页所有元素都会暂时先正常显示在该在的位置。下面我将具体解释不同类名对应的效果。<span
-                            style="background:#f1f502;">这段文字使用了fadein-right-r效果，它左边的图片使用了fadein-left-r并与animate.css的swing结合使用，并且设定了type，从而先执行过渡效果后执行动画。</span>
+                            style="background:#f1f502;">这段文字使用了fadein-right-r效果，左边的图片使用了fadein-left-r(离开时有fadeout效果)并与animate.css的swing动画结合使用，并且设定了type，从而淡入时先执行过渡效果后执行动画，淡出反之。</span>
                     </p>
                 </div>
             </div>
@@ -99,14 +99,14 @@
                     </p>
                     <p class="lazyfade fadein-right"
                         style="line-height:2em;font-size:18px;font-weight:bold;color:#7f8c8d;background:#eee;"><span
-                            style="padding:5px 10px;background:#73abfe;color:white;">注意：</span>在你使用-r类型的效果时，fadein（淡入）过程中设置了一个时间死区，在此期间不再会出现fadeout（淡出）。
+                            style="padding:5px 10px;background:#73abfe;color:white;">注意：</span>考虑到使用体验，在你使用-r类型的效果时，fadein（淡入）过程中设置了一个时间死区，在fadein期间不会执行fadeout（淡出）。
                     </p>
                 </div>
                 <div class="lazyfade fadein-bottom"
                     style="display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;width:100%;font-size:18px;">
                     <div style="margin-top: 10px;background: #eef10d;text-align:center;">下方的这些列表使用了fadein-bottom效果</div>
                     <ul style="width:100%;background:#eee;">
-                        <li style="line-height:2em;">lazyfade: 必须具备的类名（现在，若觉得提供的效果有限可自定义样式，见3.30新增）</li>
+                        <li style="line-height:2em;">lazyfade: 必须具备的类名（现在，若觉得提供的默认基础效果种类有限，可自定义效果甚至第三方动画，<span style="background: #eef10d;color:#fff;">教程见3.30新增</span>）</li>
                         <li style="line-height:2em;">fadein-left: 当元素出现在可视窗口时，从左到右移入，并逐渐显示，然后不再变化</li>
                         <li style="line-height:2em;">fadein-right: 当元素出现在可视窗口时，从右到左移入，并逐渐显示，然后不再变化</li>
                         <li style="line-height:2em;">fadein-top: 当元素出现在可视窗口时，从上到下移入，并逐渐显示，然后不再变化</li>
