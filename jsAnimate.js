@@ -688,7 +688,7 @@ var jsAnimate = function () {
         return node
     }
 
-    //类似animate.css的过渡效果
+    //类似wow.js和animate.css的效果，同时加入了类似vue-transition的自定义功能
     function fade() {
         //所有需要懒加载的元素, 存放懒加载元素相关数据的数组, 窗口高度
         var lazyDocuments, lazyNodeArray = [], clientHeight
@@ -925,7 +925,7 @@ var jsAnimate = function () {
                             }
                             targetIndex = index
                             if (object.delay) {
-                                delay = parseFloat(object.delay) + (object.duration.enter || 1000)
+                                delay = parseFloat(object.delay) + (parseFloat(object.duration.enter) || 1000)
                             }
                             else {
                                 delay = compelateTime(object)
