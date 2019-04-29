@@ -1,4 +1,4 @@
-# jsAnimate（只需一个js，无须css，即可实现`懒加载过渡动画`（综合了类似animate.css、wow.js、vue-transition的功能）、`轮播图`、`旋转木马`等特效，可在页面任一处复用，自适应页面尺寸变化，所有方法都在jsAnimate对象中调用）
+# jsAnimate（只需一个js，无须css，即可实现`懒加载过渡动画`（综合实现了类似animate.css、wow.js、vue-transition的功能）、`轮播图`、`旋转木马`等特效，可在页面任一处复用，自适应页面尺寸变化，所有方法都在jsAnimate对象中调用）
 <h3>更新时间updata: 2019.4.3—4.13&nbsp;&nbsp;&nbsp;&nbsp;懒加载过渡动画功能中增加duration属性和transition-enter属性，优化了性能，修复了一些bug(until4.26)。<a href="https://hiwayne.github.io/jsAnimate/lazyfade.html">（点击查看过渡动画lazyfade教程）</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在你可以通过在元素标签里加入duration和transition-enter属性，以显式的定制进入和移出的持续时间、延迟时间、初始过渡样式、贝塞尔曲线(或ease等)。比如，我们可以拥有一个精心编排的一系列过渡效果，其中一些嵌套的内部元素相比于过渡效果的根元素有延迟的或更长的过渡效果。同时还可以搭配自定义动画效果使用，也可以引入第三方动画库，如Animate.css。duration和transition-enter属性的某些用法参考了vue的transition使用风格。所以用过vue的同学可能会比较容易理解上手。</h3><br /><br />
 <h3>更新时间updata: 2019.3.20&nbsp;&nbsp;&nbsp;&nbsp;新增功能--新增类似animate.css和wow.js的懒加载过渡效果: 只需引入jsAnimate.js，然后在你想要的元素class属性里加入相关的类名即可，具体类名对应的效果以及使用中的注意事项，<a href="https://hiwayne.github.io/jsAnimate/lazyfade.html">点击查看过渡动画lazyfade.html中的演示教程</a>，或下载该repository。<br />
   --2019.3.26 新增放大过渡，类名：zoomin、zoomin-r。</h3><br /><br />
