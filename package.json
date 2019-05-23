@@ -1,0 +1,22 @@
+{
+  "name": "js-animate",
+  "version": "1.0.0",
+  "description": "a js-plugin for web special efficiency, like lazyload and slide etc.",
+  "main": "jsAnimate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiWayne/jsAnimate.git"
+  },
+  "keywords": [
+    "js-plugin"
+  ],
+  "author": "HiWayne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HiWayne/jsAnimate/issues"
+  },
+  "homepage": "https://github.com/HiWayne/jsAnimate#readme"
+}
