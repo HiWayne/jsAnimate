@@ -4,7 +4,9 @@
   "description": "a js-plugin for web special efficiency, like lazyload and slide etc.",
   "main": "jsAnimate.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "webpack-dev-server --hot",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/HiWayne/jsAnimate/issues"
   },
-  "homepage": "https://github.com/HiWayne/jsAnimate#readme"
+  "homepage": "https://github.com/HiWayne/jsAnimate#readme",
+  "devDependencies": {
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0"
+  }
 }
