@@ -1,5 +1,5 @@
 # jsAnimate（只需一个js，无须css，即可实现`懒加载过渡动画`（综合实现了类似animate.css、wow.js、vue-transition的功能）、`轮播图`、`旋转木马`等特效，可在页面任一处复用，自适应页面尺寸变化，所有方法都在jsAnimate对象中调用）
-## 使用：
+## 使用：(文档中有在线查看demo和教程的链接)
 使用dist文件夹中打包后的jsAnimate.js<br/><br/>
 如果你通过<script>方式使用jsAnimate.js，你可以通过window.jsAnimate全局变量来使用jsAnimate对象
 ```
