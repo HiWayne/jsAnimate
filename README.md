@@ -1,10 +1,11 @@
 # jsAnimate（只需一个js，无须css，即可实现`懒加载过渡动画`（综合实现了类似animate.css、wow.js、vue-transition的功能）、`轮播图`、`旋转木马`等特效，可在页面任一处复用，自适应页面尺寸变化，所有方法都在jsAnimate对象中调用）
 ## 使用：
-你可以这样使用dist文件夹中的jsAnimate.js，jsAnimate已经是全局变量
+使用dist文件夹中打包后的jsAnimate.js<br/><br/>
+如果你通过<script>方式使用jsAnimate.js，你可以通过window.jsAnimate全局变量来使用jsAnimate对象
 ```
 <script type="text/javascript" src="jsAnimate.js"></script>
 ```
-同时jsAnimate.js也通过export default输出，你也可以用模块化的方式引入它
+同时jsAnimate.js也支持通过ES6模块化的方式引入
 ```
 import jsAnimate from 'jsAnimate.js'
 ```
@@ -21,6 +22,7 @@ npm run serve
 npm run build
 ```
 ## 功能更新与演示文档：
+<h3>更新时间 updata: 2019.6.25&nbsp;&nbsp;&nbsp;&nbsp;升级旋转木马和轮播图的api(向后兼容)，适用于同一页面有多个旋转木马或轮播图，且它们使用相同的配置参数的场景。将多个id以数组的形式作为第一个参数，除id外的配置对象作为第二个参数。之前的单参数api依然支持。</h3><br /><br />
 <h3>更新时间 updata: 2019.5.23&nbsp;&nbsp;&nbsp;&nbsp;jsAnimate.js模块化重构，打包后的文件在dist目录，模块化源文件在src目录，旧的js单文件在oldfile目录。注意：轮播图插件中图片引用于网络，因为域名到期原因，可能无法打开，可以在本地HTML中替换成自己的图片查看效果。</h3><br /><br />
 <h3>更新时间 updata: 2019.4.3—4.13&nbsp;&nbsp;&nbsp;&nbsp;懒加载过渡动画功能中增加duration属性和transition-enter属性，优化了性能，修复了一些bug(until4.26)。<a href="https://hiwayne.github.io/jsAnimate/lazyfade.html">（点击查看过渡动画lazyfade教程）</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在你可以通过在元素标签里加入duration和transition-enter属性，以显式的定制进入和移出的持续时间、延迟时间、初始过渡样式、贝塞尔曲线(或ease等)。比如，我们可以拥有一个精心编排的一系列过渡效果，其中一些嵌套的内部元素相比于过渡效果的根元素有延迟的或更长的过渡效果。同时还可以搭配自定义动画效果使用，也可以引入第三方动画库，如Animate.css。duration和transition-enter属性的某些用法参考了vue的transition使用风格。所以用过vue的同学可能会比较容易理解上手。</h3><br /><br />
 <h3>更新时间 updata: 2019.3.20&nbsp;&nbsp;&nbsp;&nbsp;新增功能--新增类似animate.css和wow.js的懒加载过渡效果: 只需引入jsAnimate.js，然后在你想要的元素class属性里加入相关的类名即可，具体类名对应的效果以及使用中的注意事项，<a href="https://hiwayne.github.io/jsAnimate/lazyfade.html">点击查看过渡动画lazyfade.html中的演示教程</a>，或下载该repository。<br />
